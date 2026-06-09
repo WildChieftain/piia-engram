@@ -1,0 +1,122 @@
+# Python
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Engram 用户数据（绝不提交）
+.engram/
+.piia/
+*.env
+.env.*
+engram_backup_*.json
+identity_card.md
+reader_cache/
+
+# Corpus encryption salt (per-engram; derived key material — never commit)
+.corpus_salt
+
+# Secrets / credentials（防止意外提交）
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+
+# v3.31 A: project-specific guard patterns extension (loaded by
+# .github/workflows/guard-strategic-files.yml when present). Keeping
+# the specifics here instead of inlined in the workflow yaml stops
+# the path patterns from being broadcast in the public CI config.
+.guardignore
+
+# v3.31: project-specific internal-disclosure regexes loaded by
+# scripts/release_sanitize_check.py --internal. Kept out of the public
+# script so it doesn't broadcast which specifics we scrub.
+.sanitizeignore
+
+# v3.31 P1-3: internal docs (CHANGELOG-internal.md and any other
+# maintainer-only notes that hold review codes / debugging detail /
+# strategy). The public CHANGELOG.md ships; this dir never does.
+docs/internal/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated temp files
+test_output.txt
+test_stdout.txt
+test_out.txt
+my_ai_profile.html
+.claude/
+.mypy_cache/
+.ruff_cache/
+
+# Benchmark & evaluation outputs (results stay local, code & REPORT.md go in)
+experiments/**/results_*.json
+experiments/**/results_*.jsonl
+experiments/**/raw_log_*.jsonl
+experiments/**/scores.json
+experiments/**/facts.json
+experiments/**/chatgpt_scores.json
+
+# Coverage artifacts
+.coverage
+htmlcov/
+docs/coverage/
+worker/.wrangler/
+
+# Root server.json — stale copy left by old mcp-publisher workflow.
+# Canonical source is .mcp/server.json; publish runs `cd .mcp && mcp-publisher publish`.
+/server.json
+
+# Internal-only doc drafts (not for publishing)
+docs/_drafts/
+
+# Private/generated Playbook content. Public releases may document the
+# Playbook engine and generic examples, but maintainer-generated Playbook
+# bodies, titles, steps, or workflow exports stay outside the repository.
+playbooks/
+generated_playbooks/
+generated-playbooks/
+*_Playbook_*.md
+*_playbook_*.md
+*.playbook.md
+
+# Competitive intelligence & internal strategy (never publish)
+experiments/competitive_landscape*.md
+experiments/beta_recruitment*.md
+docs/messaging.md
+docs/vision.md
+
+# Internal R&D / evaluation methodology — the ENTIRE experiments/ tree
+# is maintainer-only (eval judge model selection, scoring rubrics,
+# per-round reports, audit harnesses, router/coordinator prototypes).
+# Strategic signal, not user-facing reproducibility. Kept local; never
+# published. (The specific sub-patterns below are now subsumed by this
+# blanket rule but kept for documentation of intent.)
+experiments/
+
+# Internal / strategic documents
+docs/design/
+docs/telemetry_roadmap.md
+docs/playbook-auto-extraction-design.md
+docs/milestone_review_*.md
+docs/milestone_review_*.html
+docs/coverage_baseline_*.md
+experiments/evaluations/v*/cross_ai/
+experiments/evaluations/v*/REPORT.md
+experiments/evaluations/v*/README.md
+experiments/evaluations/v*/evidence_pack.md
+experiments/evaluations/v*/run_evaluation.py
+experiments/dynamic_loading/HOW_TO_TEST.md
+**/engram-private-strategy/
