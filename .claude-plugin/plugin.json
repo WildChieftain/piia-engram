@@ -1,0 +1,22 @@
+{
+  "name": "piia-engram",
+  "version": "3.53.0",
+  "description": "Local-first personal AI identity layer for MCP-compatible coding tools. Stores your lessons, decisions, playbooks, and project context as local JSON. AI proposes; high-risk items wait for your review, and everything stays visible and reversible. Local-first, no cloud, no account.",
+  "author": {
+    "name": "Engram Contributors",
+    "url": "https://github.com/Patdolitse/piia-engram"
+  },
+  "homepage": "https://github.com/Patdolitse/piia-engram",
+  "license": "AGPL-3.0-or-later",
+  "keywords": [
+    "memory",
+    "identity",
+    "cross-tool",
+    "local-first",
+    "mcp",
+    "knowledge-management",
+    "claude-code",
+    "cursor",
+    "codex"
+  ]
+}
